@@ -39,7 +39,7 @@ def extract_vin(img):
         text = text + output[i][1]
     return(text)
 
-def ocr_space_file(filename, overlay=False, api_key='K88251780688957', language='eng'):
+def ocr_space_file(filename, overlay=False, api_key='', language='eng'):
     payload = {'isOverlayRequired': overlay,
                'apikey': api_key,
                'language': language,
@@ -66,7 +66,7 @@ def decimal_degrees(coordinate, ref): # To convert the coordinate to decimal deg
             return decimal_degrees
 
 def vin_extract(img):
-    headers = {"X-Api-Key": 'hzotFcvpxYYFl2LG1Z5sqw==xCzcuEHFZ0PblDMo', 'Access-Control-Allow-Origin': '*'}
+    headers = {"X-Api-Key": 'use your own key', 'Access-Control-Allow-Origin': '*'}
     api_url = 'https://api.api-ninjas.com/v1/imagetotext'
 
     image_file_descriptor = open(f"media/{img}", 'rb')
